@@ -35,6 +35,9 @@ with col2:
 with col3:
     st.metric(label="Métrica 3", value=300)
 
+# Adicionando uma linha horizontal para dividir o conteúdo
+st.markdown("---")
+
 # Adicionando gráficos abaixo da linha horizontal
 
 col1, col2, col3 = st.columns(3)
