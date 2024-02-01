@@ -40,21 +40,16 @@ with col3:
 col1, col2, col3 = st.columns(3)
 
 with col1:
-    st.header('gráfico de pizza')
-    # Criando o gráfico de pizza
     fig = px.pie(df, values='Valores', names='Categoria', title='Gráfico de Pizza')
 
     # Mostrando o gráfico no Streamlit
     st.plotly_chart(fig, use_container_width=True)
 
 with col2:
-    st.header('gráfico de barras')
-    # Adicione o código para o segundo gráfico aqui
-    # Criando o gráfico de barras
     fig = px.bar(df, x='Categoria', y='Valores', title='Gráfico de Barras')
 
-# Mostrando o gráfico no Streamlit
-st.plotly_chart(fig, use_container_width=True)
+    # Mostrando o gráfico no Streamlit
+    st.plotly_chart(fig, use_container_width=True)
 
 with col3:
     st.header('Gráfico 3')
