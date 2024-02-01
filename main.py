@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 st.set_page_config(layout="wide")
-
+# teste de update via vscode
 # Adicionando CSS para estilização
 st.markdown("""
 <style>
