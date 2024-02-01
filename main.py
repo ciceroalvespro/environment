@@ -22,9 +22,8 @@ data2 = {
 df2 = pd.DataFrame(data2)
 
 # Título do Dashboard
-#st.title('Dashboard')
 st.markdown("""
-    <h1 style='text-align: center;'>Meu Dashboard Básico</h1>
+    <h1 style='text-align: center;'>Dashboard Básico</h1>
     """, unsafe_allow_html=True)
 
 # Adicionando uma linha horizontal para dividir o conteúdo
