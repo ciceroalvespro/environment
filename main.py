@@ -8,7 +8,7 @@ st.markdown("---")
 
 # Adicionando as métricas dentro da linha horizontal
 st.markdown("## Métricas")
-col1, col2, col3 = st.beta_columns(3)
+col1, col2, col3 = st.columns(3)
 
 # Adicionando as métricas em cada coluna
 with col1:
