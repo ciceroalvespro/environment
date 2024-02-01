@@ -57,7 +57,7 @@ projeto = st.sidebar.selectbox('Projetos', ['Projeto A', 'Projeto B', 'Projeto C
 ano = st.sidebar.selectbox('Ano', ['2022', '2023', '2024'])
 
 # Layout com 3 colunas
-col1, col2, col3 = st.columns([1, 1, 2])
+col1, col2, col3 = st.columns(3)
 
 # KPIs
 with col1:
@@ -89,3 +89,4 @@ with col3:
     # Expander sobre o dashboard
     with st.expander('Sobre o Dashboard'):
         st.write('Este é um dashboard simples criado com Streamlit para demonstração.')
+
