@@ -39,13 +39,8 @@ with col3:
     st.header('Gráfico 3')
     # Adicione o código para o terceiro gráfico aqui
     # Expander sobre o dashboard
-   
-
-with col4:
-    st.header('Gráfico 4')
-    # Adicione o código para o terceiro gráfico aqui
-    # Expander sobre o dashboard
     with st.expander('Sobre o Dashboard'):
         st.write('Este é um dashboard simples criado com Streamlit para demonstração.')
+
 
 
