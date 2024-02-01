@@ -2,6 +2,8 @@ import plotly.express as px
 import streamlit as st
 import pandas as pd
 
+st.set_page_config(layout="wide")
+
 # Dados de exemplo
 data = {
     'Categoria': ['A', 'B', 'C', 'D'],
@@ -34,7 +36,7 @@ with col3:
     st.metric(label="Métrica 3", value=300)
 
 # Adicionando gráficos abaixo da linha horizontal
-st.markdown("## Gráficos")
+
 col1, col2, col3 = st.columns(3)
 
 with col1:
