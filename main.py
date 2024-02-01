@@ -1,7 +1,10 @@
 import streamlit as st
 
 # Título do Dashboard
-st.title('Meu Dashboard Básico')
+#st.title('Meu Dashboard Básico')
+st.markdown("""
+    <h1 style='text-align: center;'>Meu Dashboard Básico</h1>
+    """, unsafe_allow_html=True)
 
 # Adicionando uma linha horizontal para dividir o conteúdo
 st.markdown("---")
