@@ -2,7 +2,7 @@ import plotly.express as px
 import streamlit as st
 import pandas as pd
 
-#st.set_page_config(layout="wide")
+st.set_page_config(layout="wide")
 
 # Dados de exemplo
 data = {
@@ -22,7 +22,7 @@ data2 = {
 df2 = pd.DataFrame(data2)
 
 # Título do Dashboard
-#st.title('Meu Dashboard Básico')
+#st.title('Dashboard')
 st.markdown("""
     <h1 style='text-align: center;'>Meu Dashboard Básico</h1>
     """, unsafe_allow_html=True)
