@@ -65,7 +65,7 @@ with col2:
 
 with col3:
     # Criando o mapa com os aeroportos
-    fig = px.scatter_geo(df, lat='Latitude', lon='Longitude', hover_name='Aeroporto', scope='south america')
+    fig = px.scatter_geo(df2, lat='Latitude', lon='Longitude', hover_name='Aeroporto', scope='south america')
 
     # Configurações adicionais do layout do mapa
     fig.update_geos(projection_type="natural earth")
