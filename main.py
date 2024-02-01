@@ -1,105 +1,40 @@
 import streamlit as st
-import seaborn as sns
-import matplotlib.pyplot as plt
-import numpy as np
 
-st.set_page_config(layout="wide")
-# teste de update via vscode
-# Adicionando CSS para estilização
-st.markdown("""
-<style>
-    .title {
-        color: #333333;
-        text-align: center;
-    }
-    .sidebar .sidebar-content {
-        background-color: #f0f0f0;
-    }
-    .css-14xro0k {
-        background-color: #f0f0f0;
-    }
-</style>
-""", unsafe_allow_html=True)
+# Título do Dashboard
+st.title('Meu Dashboard Básico')
 
-# Função para alterar o tema com base na seleção do usuário
-def set_theme(theme):
-    if theme == 'Claro':
-        theme_bg = 'light'
-        theme_text = '#333333'
-    elif theme == 'Escuro':
-        theme_bg = 'dark'
-        theme_text = '#ffffff'
-    else:
-        theme_bg = 'light'
-        theme_text = '#333333'
-    return theme_bg, theme_text
+# Adicionando uma linha horizontal para dividir o conteúdo
+st.markdown("---")
 
-# Título da página
-st.title('Dashboard')
+# Adicionando as métricas dentro da linha horizontal
+st.markdown("## Métricas")
+col1, col2, col3 = st.beta_columns(3)
 
-# Opções de tema
-theme_options = ['Claro', 'Escuro', 'Padrão']
-selected_theme = st.sidebar.selectbox('Escolha o Tema', theme_options)
-
-# Setando o tema
-theme_bg, theme_text = set_theme(selected_theme)
-st.markdown(f"""
-    <style>
-        .stApp {{
-            background-color: {theme_bg} !important;
-            color: {theme_text};
-        }}
-    </style>
-""", unsafe_allow_html=True)
-
-# Sidebar com filtros
-st.sidebar.title('Filtros')
-
-# Selectbox para os projetos
-projeto = st.sidebar.selectbox('Projetos', ['Projeto A', 'Projeto B', 'Projeto C'])
-
-# Selectbox para os anos
-ano = st.sidebar.selectbox('Ano', ['2022', '2023', '2024'])
-
-# Layout com 3 colunas
-col1, col2, col3 = st.columns(3)
-
-# KPIs
+# Adicionando as métricas em cada coluna
 with col1:
-    st.metric(label='KPI 1', value=100)
+    st.metric(label="Métrica 1", value=100)
 
 with col2:
-    st.metric(label='KPI 2', value=200)
+    st.metric(label="Métrica 2", value=200)
 
 with col3:
-    st.metric(label='KPI 3', value=300)
+    st.metric(label="Métrica 3", value=300)
 
-# Gráfico de barras na horizontal
+# Adicionando gráficos abaixo da linha horizontal
+st.markdown("## Gráficos")
+col1, col2, col3 = st.beta_columns(3)
+
 with col1:
-    st.write('## Gráfico de Barras')
-    st.bar_chart({'Projeto A': [10, 20, 30],
-                  'Projeto B': [15, 25, 35],
-                  'Projeto C': [20, 30, 40]})
+    st.header('Gráfico 1')
+    # Adicione o código para o primeiro gráfico aqui
 
-# Mapa de calor
 with col2:
-    st.write('## Mapa de Calor')
-    
-    # Gerando dados aleatórios para o mapa de calor
-    data = np.random.rand(10, 10)
-    
-    # Plotando o mapa de calor
-    sns.heatmap(data, annot=True, cmap='coolwarm', fmt='.2f', cbar=False, square=True)
-    plt.xlabel('Eixo X')
-    plt.ylabel('Eixo Y')
-    plt.title('Mapa de Calor Aleatório')
-    st.pyplot()
+    st.header('Gráfico 2')
+    # Adicione o código para o segundo gráfico aqui
 
-# Cartão com valor total
 with col3:
-    st.write('## Valor Total')
-    st.write('O valor total é 600')
-
+    st.header('Gráfico 3')
+    # Adicione o código para o terceiro gráfico aqui
     # Expander sobre o dashboard
     with st.expander('Sobre o Dashboard'):
         st.write('Este é um dashboard simples criado com Streamlit para demonstração.')
