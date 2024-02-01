@@ -11,7 +11,7 @@ st.markdown("---")
 
 # Adicionando as métricas dentro da linha horizontal
 #st.markdown("## Métricas")
-col1, col2, col3 = st.columns(3)
+col1, col2, col3, col4 = st.columns(4)
 
 # Adicionando as métricas em cada coluna
 with col1:
@@ -39,6 +39,13 @@ with col3:
     st.header('Gráfico 3')
     # Adicione o código para o terceiro gráfico aqui
     # Expander sobre o dashboard
+   
+
+with col4:
+    st.header('Gráfico 4')
+    # Adicione o código para o terceiro gráfico aqui
+    # Expander sobre o dashboard
     with st.expander('Sobre o Dashboard'):
         st.write('Este é um dashboard simples criado com Streamlit para demonstração.')
+
 
