@@ -1,5 +1,10 @@
 import streamlit as st
+import seaborn as sns
+import matplotlib.pyplot as plt
+import numpy as np
+
 st.set_page_config(layout="wide")
+
 # Adicionando CSS para estilização
 st.markdown("""
 <style>
@@ -79,7 +84,16 @@ with col1:
 # Mapa de calor
 with col2:
     st.write('## Mapa de Calor')
-    st.write('Aqui vai o mapa de calor...')
+    
+    # Gerando dados aleatórios para o mapa de calor
+    data = np.random.rand(10, 10)
+    
+    # Plotando o mapa de calor
+    sns.heatmap(data, annot=True, cmap='coolwarm', fmt='.2f', cbar=False, square=True)
+    plt.xlabel('Eixo X')
+    plt.ylabel('Eixo Y')
+    plt.title('Mapa de Calor Aleatório')
+    st.pyplot()
 
 # Cartão com valor total
 with col3:
