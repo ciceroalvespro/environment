@@ -31,7 +31,7 @@ st.markdown("---")
 
 # Adicionando as métricas dentro da linha horizontal
 #st.markdown("## Métricas")
-col1, col2, col3, col4 = st.columns(4)
+col1, col2, col3, col4, col5 = st.columns(5)
 
 # Adicionando as métricas em cada coluna
 with col1:
