@@ -25,7 +25,7 @@ with col3:
 
 # Adicionando gráficos abaixo da linha horizontal
 st.markdown("## Gráficos")
-col1, col2, col3 = st.beta_columns(3)
+col1, col2, col3 = st.columns(3)
 
 with col1:
     st.header('Gráfico 1')
