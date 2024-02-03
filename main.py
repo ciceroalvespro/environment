@@ -31,20 +31,20 @@ st.markdown("---")
 
 # Adicionando as métricas dentro da linha horizontal
 #st.markdown("## Métricas")
-col1, col2, col3, col4, col5 = st.columns(5)
+col1, col2, col3, col4= st.columns(4)
 
 # Adicionando as métricas em cada coluna
 with col1:
-    st.metric(label="Métrica 1", value=100)
+    st.metric(label="Faturamento Bruto", value="R$ 100.450,45")
 
 with col2:
-    st.metric(label="Métrica 2", value=200)
+    st.metric(label="Margem Líquida", value="16.3%")
 
 with col3:
-    st.metric(label="Métrica 3", value=300)
+    st.metric(label="Margem Ebitda", value="18.30%")
 
 with col4:
-    st.metric(label="Métrica 4", value=350)
+    st.metric(label="ROE", value="12.20%")
 
 # Adicionando uma linha horizontal para dividir o conteúdo
 st.markdown("---")
